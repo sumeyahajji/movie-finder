@@ -1,3 +1,4 @@
+
 import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
 const Login = ({setIsAuthenticated}) => {
@@ -5,6 +6,7 @@ const Login = ({setIsAuthenticated}) => {
     const [userId, setUserId] = useState('');
     const navigate = useNavigate()
     const handleLogin = (e) => {
+    
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
@@ -21,7 +23,7 @@ const Login = ({setIsAuthenticated}) => {
           })
           .then(data => {
             setIsAuthenticated(true);
-            setname(data.name);
+            setname(data.name); 
             setUserId(data.userId);
             navigate('/MovieList');
           })
@@ -33,6 +35,7 @@ const Login = ({setIsAuthenticated}) => {
     return (
     <div>
         <h1 className="text-yellow-300 italic uppercase">Login</h1>
+        
         <div className="flex justify-center items-center">
       <form class="w-full max-w-sm bg-pink-500 shodow-xl rounded-xl p-5 mt-20 " noValidate no-autocomplete onSubmit={handleLogin}>
             <h1 className="text-2xl text-teal-500 text-center mb-6  font-bold">login</h1>
@@ -78,16 +81,9 @@ const Login = ({setIsAuthenticated}) => {
          </div>
       </form>
     </div>
+
 </div>
     );
 }
+ 
 export default Login
-
-
-
-
-
-
-
-
-
