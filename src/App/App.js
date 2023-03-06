@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import MovieList from './MovieList';
 import {Routes, Route} from 'react-router-dom';
