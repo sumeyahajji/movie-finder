@@ -1,5 +1,6 @@
 import { useNavigate} from "react-router-dom"
 const Register = ({setIsAuthenticated}) => {
+  
     const navigate = useNavigate()
     // register user
     const handleSubmit = async (e) => {
@@ -7,7 +8,7 @@ const Register = ({setIsAuthenticated}) => {
         const form = e.target;
         const formData = new FormData(form);
         try {
-          const response = await fetch('http://localhost:9292/users', {
+          const response = await fetch('http://127.0.0.1:9292/users', {
             method: 'POST',
             body: formData,
           });
