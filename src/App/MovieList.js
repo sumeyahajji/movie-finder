@@ -1,3 +1,4 @@
+import e from 'express';
 import React, { useState, useEffect } from 'react';
 import Movie from './Movie';
 import MovieForm from './MovieForm';
@@ -24,6 +25,7 @@ function MovieList() {
   function handleSearch(query) {
     setMovies(movies.filter((movie) => movie.title.toLowerCase()===query.toLowerCase()));
   }
+
 
  return (
     <div>
