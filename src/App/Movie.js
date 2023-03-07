@@ -1,7 +1,7 @@
 import React from "react";
 function Movie({ movie, onDeleteMovie }) {
   function handleDeleteClick() {
-    fetch(`http://localhost:9292/movies/${movie.id}`, {
+    fetch(`https://movie-finder-vzm9.onrender.com/movies/${movie.id}`, {
       method: "DELETE",
     })
       .then(() => {

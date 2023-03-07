@@ -8,7 +8,7 @@ const Register = ({setIsAuthenticated}) => {
         const form = e.target;
         const formData = new FormData(form);
         try {
-          const response = await fetch('http://127.0.0.1:9292/users', {
+          const response = await fetch('https://movie-finder-vzm9.onrender.com/users', {
             method: 'POST',
             body: formData,
           });

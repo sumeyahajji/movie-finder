@@ -10,7 +10,7 @@ const Login = ({setIsAuthenticated}) => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
-        fetch('http://localhost:9292/login', {
+        fetch('https://movie-finder-vzm9.onrender.com/login', {
           method: 'POST',
           body: formData,
         })

@@ -9,7 +9,7 @@ function MovieList() {
   
 
   useEffect(() => {
-    fetch('http://localhost:9292/movies')
+    fetch('https://movie-finder-vzm9.onrender.com/movies')
       .then(res => res.json())
       .then(data => setMovies(data))
       .catch(console.error);
@@ -22,11 +22,12 @@ function MovieList() {
     setSearchResults(searchResults.filter(movie => movie.id !== id));
   }
   function handleSearch(query) {
-    setMovies(movies.filter((movie) => movie.title.toLowerCase() === query));
+    setMovies(movies.filter((movie) => movie.title.toLowerCase()===query.toLowerCase()));
   }
 
  return (
     <div>
+      <h1>Movie Finder</h1>
       <MovieForm onAddMovie={handleAddMovie} />
       <Search onSearch={handleSearch} />
       <div className='movie-container'>
